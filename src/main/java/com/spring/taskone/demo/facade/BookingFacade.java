@@ -119,9 +119,9 @@ public interface BookingFacade {
     /**
      * Book ticket for a specified event on behalf of specified user.
      *
-     * @param userId   User Id.
-     * @param eventId  Event Id.
-     * @param place    Place number.
+     * @param userId         User Id.
+     * @param eventId        Event Id.
+     * @param place          Place number.
      * @param ticketCategory Service category.
      * @return Booked ticket object.
      * @throws java.lang.IllegalStateException if this place has already been booked.
