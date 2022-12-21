@@ -10,11 +10,16 @@ import java.util.Optional;
 import com.spring.taskone.demo.entities.Event;
 import com.spring.taskone.demo.entities.Ticket;
 import com.spring.taskone.demo.entities.User;
+import com.spring.taskone.demo.repository.TicketRepository;
 import com.spring.taskone.demo.utils.TicketCategoryEnum;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Log4j2
 public class TicketServiceImpl implements TicketService {
+
+    @Autowired
+    private TicketRepository ticketRepository;
 
     @Override
     public Optional<Ticket> bookTicket(final long userId, final long eventId, final int place, final TicketCategoryEnum ticketCategory) {

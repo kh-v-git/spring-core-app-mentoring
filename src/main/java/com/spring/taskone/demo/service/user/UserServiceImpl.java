@@ -8,10 +8,15 @@ import java.util.List;
 import java.util.Optional;
 
 import com.spring.taskone.demo.entities.User;
+import com.spring.taskone.demo.repository.UserRepository;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Log4j2
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     public Optional<User> getUserById(final long userId) {

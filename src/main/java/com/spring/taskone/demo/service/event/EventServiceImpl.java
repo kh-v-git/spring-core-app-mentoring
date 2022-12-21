@@ -9,10 +9,15 @@ import java.util.List;
 import java.util.Optional;
 
 import com.spring.taskone.demo.entities.Event;
+import com.spring.taskone.demo.repository.EventRepository;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Log4j2
 public class EventServiceImpl implements EventService {
+
+    @Autowired
+    private EventRepository eventRepository;
 
     @Override
     public Optional<Event> getEventById(final long eventId) {
@@ -41,6 +46,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public boolean deleteEvent(final long eventId) {
-        return false;
+        eventRepository.delete(eventId);
+        return eventRepository.findById(eventId).isEmpty();
     }
 }

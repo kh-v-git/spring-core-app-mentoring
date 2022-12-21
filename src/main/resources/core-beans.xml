@@ -3,10 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="bookingFacade" class="com.spring.taskone.demo.facade.BookingFacadeImpl">
+        <constructor-arg name="eventService" ref="eventService"/>
+        <constructor-arg name="ticketService" ref="ticketService"/>
+        <constructor-arg name="userService" ref="userService"/>
+    </bean>
+
     <bean id="eventService" class="com.spring.taskone.demo.service.event.EventServiceImpl"/>
 
     <bean id="ticketService" class="com.spring.taskone.demo.service.ticket.TicketServiceImpl"/>
 
     <bean id="userService" class="com.spring.taskone.demo.service.user.UserServiceImpl"/>
+
+    <bean id="eventRepository" class="com.spring.taskone.demo.storage.EventInMemoryRepositoryStorageImpl"/>
+
+    <bean id="ticketRepository" class="com.spring.taskone.demo.storage.TicketInMemoryRepositoryStorageImpl"/>
+
+    <bean id="userRepository" class="com.spring.taskone.demo.storage.UserInMemoryRepositoryStorageImpl"/>
 
 </beans>

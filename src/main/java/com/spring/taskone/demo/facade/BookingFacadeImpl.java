@@ -16,7 +16,7 @@ import com.spring.taskone.demo.service.ticket.TicketService;
 import com.spring.taskone.demo.service.user.UserService;
 import com.spring.taskone.demo.utils.TicketCategoryEnum;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 @Log4j2
 public class BookingFacadeImpl implements BookingFacade {
@@ -24,7 +24,6 @@ public class BookingFacadeImpl implements BookingFacade {
     private final TicketService ticketService;
     private final UserService userService;
 
-    @Autowired
     public BookingFacadeImpl(EventService eventService, TicketService ticketService, UserService userService) {
         this.eventService = eventService;
         this.ticketService = ticketService;

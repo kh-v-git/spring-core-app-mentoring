@@ -1,1 +1,7 @@
+config:
+  init:
+    data:
+      event: init_event_data.txt
+      ticket: init_ticket_data.txt
+      userdata: init_user_data.txt
 
