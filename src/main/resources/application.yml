@@ -1,7 +1,12 @@
 config:
   init:
-    data:
-      event: init_event_data.txt
-      ticket: init_ticket_data.txt
-      userdata: init_user_data.txt
-
+    data: data/init_data.json
+logging:
+  level:
+    org.springframework: ERROR
+    com.spring.taskone.demo: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
+  file:
+    name: app_logs/taskOneApp.log

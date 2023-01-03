@@ -1,0 +1,178 @@
+{
+  "events": [
+    {
+      "id": "0",
+      "date": "2023-02-21",
+      "title": "Home Along"
+    },
+    {
+      "id": "1",
+      "date": "2023-02-22",
+      "title": "Hot Feet's"
+    },
+    {
+      "id": "2",
+      "date": "2023-03-19",
+      "title": "Die Hard"
+    }
+  ],
+  "users": [
+    {
+      "id": "0",
+      "name": "John Doe",
+      "email": "john.doe@yahoo.com"
+    },
+    {
+      "id": "1",
+      "name": "Booby Bolivia",
+      "email": "booby.bolivia@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "John Maclean",
+      "email": "john.maclein@microsoft.com"
+    },
+    {
+      "id": "3",
+      "name": "Iron Man",
+      "email": "iron.man@marvel.com"
+    },
+    {
+      "id": "4",
+      "name": "Dead Poll",
+      "email": "dead.poll@marvel.com"
+    },
+    {
+      "id": "5",
+      "name": "Capitan America",
+      "email": "capitan.america@marvel.com"
+    },
+    {
+      "id": "6",
+      "name": "Capitan Marvel",
+      "email": "capitan.marvel@marvel.com"
+    },
+    {
+      "id": "7",
+      "name": "Ant Man",
+      "email": "ant.man@marvel.com"
+    },
+    {
+      "id": "8",
+      "name": "Luke Cage",
+      "email": "luke.cage@marvel.com"
+    },
+    {
+      "id": "9",
+      "name": "Jessica Jones",
+      "email": "jessica.jones@marvel.com"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "0",
+      "eventId": "0",
+      "userId": "0",
+      "placeNumber": "1",
+      "ticketCategory": "LUX"
+    },
+    {
+      "id": "1",
+      "eventId": "0",
+      "userId": "1",
+      "placeNumber": "2",
+      "ticketCategory": "PREMIUM"
+    },
+    {
+      "id": "2",
+      "eventId": "0",
+      "userId": "2",
+      "placeNumber": "3",
+      "ticketCategory": "STANDARD"
+    },
+    {
+      "id": "3",
+      "eventId": "0",
+      "userId": "3",
+      "placeNumber": "4",
+      "ticketCategory": "LUX"
+    },
+    {
+      "id": "4",
+      "eventId": "0",
+      "userId": "4",
+      "placeNumber": "5",
+      "ticketCategory": "PREMIUM"
+    },
+    {
+      "id": "5",
+      "eventId": "1",
+      "userId": "5",
+      "placeNumber": "1",
+      "ticketCategory": "STANDARD"
+    },
+    {
+      "id": "6",
+      "eventId": "1",
+      "userId": "6",
+      "placeNumber": "2",
+      "ticketCategory": "LUX"
+    },
+    {
+      "id": "7",
+      "eventId": "1",
+      "userId": "7",
+      "placeNumber": "3",
+      "ticketCategory": "PREMIUM"
+    },
+    {
+      "id": "8",
+      "eventId": "1",
+      "userId": "8",
+      "placeNumber": "4",
+      "ticketCategory": "STANDARD"
+    },
+    {
+      "id": "9",
+      "eventId": "1",
+      "userId": "9",
+      "placeNumber": "5",
+      "ticketCategory": "LUX"
+    },
+    {
+      "id": "10",
+      "eventId": "2",
+      "userId": "0",
+      "placeNumber": "1",
+      "ticketCategory": "PREMIUM"
+    },
+    {
+      "id": "11",
+      "eventId": "2",
+      "userId": "3",
+      "placeNumber": "2",
+      "ticketCategory": "STANDARD"
+    },
+    {
+      "id": "12",
+      "eventId": "2",
+      "userId": "6",
+      "placeNumber": "3",
+      "ticketCategory": "LUX"
+    },
+    {
+      "id": "13",
+      "eventId": "2",
+      "userId": "9",
+      "placeNumber": "4",
+      "ticketCategory": "PREMIUM"
+    },
+    {
+      "id": "14",
+      "eventId": "2",
+      "userId": "5",
+      "placeNumber": "6",
+      "ticketCategory": "STANDARD"
+    }
+  ]
+}

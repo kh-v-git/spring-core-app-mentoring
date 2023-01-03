@@ -9,15 +9,16 @@ import java.util.List;
 import java.util.Optional;
 
 import com.spring.taskone.demo.entities.Event;
-import com.spring.taskone.demo.repository.EventRepository;
-import lombok.extern.log4j.Log4j2;
+import com.spring.taskone.demo.storage.InMemoryRepositoryStorageImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Log4j2
 public class EventServiceImpl implements EventService {
+    private static final Logger log = LoggerFactory.getLogger(EventServiceImpl.class);
 
     @Autowired
-    private EventRepository eventRepository;
+    private InMemoryRepositoryStorageImpl inMemoryRepositoryStorage;
 
     @Override
     public Optional<Event> getEventById(final long eventId) {
@@ -46,7 +47,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public boolean deleteEvent(final long eventId) {
-        eventRepository.delete(eventId);
-        return eventRepository.findById(eventId).isEmpty();
+        inMemoryRepositoryStorage.delete(eventId);
+        return inMemoryRepositoryStorage.findById(eventId).isEmpty();
     }
 }

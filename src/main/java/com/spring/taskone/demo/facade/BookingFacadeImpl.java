@@ -15,11 +15,12 @@ import com.spring.taskone.demo.service.event.EventService;
 import com.spring.taskone.demo.service.ticket.TicketService;
 import com.spring.taskone.demo.service.user.UserService;
 import com.spring.taskone.demo.utils.TicketCategoryEnum;
-import lombok.extern.log4j.Log4j2;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-
-@Log4j2
 public class BookingFacadeImpl implements BookingFacade {
+    private static final Logger log = LoggerFactory.getLogger(BookingFacadeImpl.class);
+
     private final EventService eventService;
     private final TicketService ticketService;
     private final UserService userService;

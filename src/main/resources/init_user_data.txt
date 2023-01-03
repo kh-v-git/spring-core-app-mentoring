@@ -1,3 +1,0 @@
-//todo three json files with init data
-
-//todo event.json
