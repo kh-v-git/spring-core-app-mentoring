@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.spring.taskone.demo.entities.Event;
-import com.spring.taskone.demo.storage.InMemoryRepositoryStorageImpl;
+import com.spring.taskone.demo.storage.EventInMemoryRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class EventServiceImpl implements EventService {
     private static final Logger log = LoggerFactory.getLogger(EventServiceImpl.class);
 
     @Autowired
-    private InMemoryRepositoryStorageImpl inMemoryRepositoryStorage;
+    private EventInMemoryRepository eventInMemoryRepository;
 
     @Override
     public Optional<Event> getEventById(final long eventId) {
@@ -36,8 +36,12 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public Optional<Event> createEvent(final Event event) {
-        return null;
+    public Event createEvent(final Event event) {
+        Event savedEvent = eventInMemoryRepository.save(event);
+
+        log.debug("New Event with ID {} was created", savedEvent.getId());
+
+        return savedEvent;
     }
 
     @Override
@@ -47,7 +51,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public boolean deleteEvent(final long eventId) {
-        inMemoryRepositoryStorage.delete(eventId);
-        return inMemoryRepositoryStorage.findById(eventId).isEmpty();
+
+        return false;
     }
 }

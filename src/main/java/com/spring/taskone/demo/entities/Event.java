@@ -13,15 +13,30 @@ public class Event {
      *
      * @return Event Id
      */
-    private long id;
+    private Long id;
     private LocalDate date;
     private String title;
 
-    public long getId() {
+    public Event() {
+
+    }
+
+    public Event(final LocalDate date, final String title) {
+        this.date = date;
+        this.title = title;
+    }
+
+    public Event(final Long id, final LocalDate date, final String title) {
+        this.id = id;
+        this.date = date;
+        this.title = title;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(final long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 

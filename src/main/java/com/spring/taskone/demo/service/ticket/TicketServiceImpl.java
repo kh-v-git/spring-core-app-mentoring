@@ -10,7 +10,7 @@ import java.util.Optional;
 import com.spring.taskone.demo.entities.Event;
 import com.spring.taskone.demo.entities.Ticket;
 import com.spring.taskone.demo.entities.User;
-import com.spring.taskone.demo.storage.InMemoryRepositoryStorageImpl;
+import com.spring.taskone.demo.storage.TicketInMemoryRepository;
 import com.spring.taskone.demo.utils.TicketCategoryEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +20,10 @@ public class TicketServiceImpl implements TicketService {
     private static final Logger log = LoggerFactory.getLogger(TicketServiceImpl.class);
 
     @Autowired
-    private InMemoryRepositoryStorageImpl inMemoryRepositoryStorage;
+    private TicketInMemoryRepository ticketInMemoryRepository;
 
     @Override
-    public Optional<Ticket> bookTicket(final long userId, final long eventId, final int place, final TicketCategoryEnum ticketCategory) {
+    public Ticket bookTicket(Ticket ticket) {
         return null;
     }
 

@@ -6,18 +6,10 @@ package com.spring.taskone.demo.repository;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 import com.spring.taskone.demo.entities.Event;
 
-public interface EventRepository {
-    Optional<Event> findById(long id);
-
-    Optional<Event> save(Event event);
-
-    void delete(long id);
-
-    boolean existsById(long id);
+public interface EventRepository extends StorageRepository<Event, Long> {
 
     List<Event> findByTitle(String title, int pageSize, int pageNum);
 

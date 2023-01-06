@@ -14,17 +14,28 @@ public class Ticket {
      *
      * @return Ticket Id.
      */
-    private long id;
+    private Long id;
     private long eventId;
     private long userId;
     private int placeNumber;
     private TicketCategoryEnum ticketCategory;
 
-    public long getId() {
+    public Ticket() {
+
+    }
+
+    public Ticket(final long eventId, final long userId, final int placeNumber, final TicketCategoryEnum ticketCategory) {
+        this.eventId = eventId;
+        this.userId = userId;
+        this.placeNumber = placeNumber;
+        this.ticketCategory = ticketCategory;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(final long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 

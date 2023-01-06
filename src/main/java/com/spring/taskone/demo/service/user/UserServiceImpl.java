@@ -7,8 +7,9 @@ package com.spring.taskone.demo.service.user;
 import java.util.List;
 import java.util.Optional;
 
+import com.spring.taskone.demo.entities.Event;
 import com.spring.taskone.demo.entities.User;
-import com.spring.taskone.demo.storage.InMemoryRepositoryStorageImpl;
+import com.spring.taskone.demo.storage.UserInMemoryRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class UserServiceImpl implements UserService {
     private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
-    private InMemoryRepositoryStorageImpl inMemoryRepositoryStorage;
+    private UserInMemoryRepository userInMemoryRepository;
 
     @Override
     public Optional<User> getUserById(final long userId) {
@@ -35,8 +36,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> createUser(final User user) {
-        return null;
+    public User createUser(final User user) {
+        User savedUser = userInMemoryRepository.save(user);
+
+        log.debug("New User with ID {} was created", savedUser.getId());
+
+        return savedUser;
     }
 
     @Override

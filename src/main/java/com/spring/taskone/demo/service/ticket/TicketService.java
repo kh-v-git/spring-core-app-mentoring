@@ -9,7 +9,7 @@ import com.spring.taskone.demo.entities.User;
 import com.spring.taskone.demo.utils.TicketCategoryEnum;
 
 public interface TicketService {
-    Optional<Ticket> bookTicket(long userId, long eventId, int place, TicketCategoryEnum ticketCategory);
+    Ticket bookTicket(Ticket ticket);
 
     List<Ticket> getBookedTickets(User user, int pageSize, int pageNum);
 

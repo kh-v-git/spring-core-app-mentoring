@@ -13,7 +13,7 @@ public interface EventService {
 
     List<Event> getEventsForDay(LocalDate day, int pageSize, int pageNum);
 
-    Optional<Event> createEvent(Event event);
+    Event createEvent(Event event);
 
     Optional<Event> updateEvent(Event event);
 

@@ -12,7 +12,7 @@ public interface UserService {
 
     List<User> getUsersByName(String name, int pageSize, int pageNum);
 
-    Optional<User> createUser(User user);
+    User createUser(User user);
 
     Optional<User> updateUser(User user);
 

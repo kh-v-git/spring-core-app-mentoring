@@ -49,7 +49,7 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public Event createEvent(final Event event) {
-        return eventService.createEvent(event).orElse(null);
+        return eventService.createEvent(event);
     }
 
     @Override
@@ -79,7 +79,7 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public User createUser(final User user) {
-        return userService.createUser(user).orElse(null);
+        return userService.createUser(user);
     }
 
     @Override
@@ -94,7 +94,8 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public Ticket bookTicket(final long userId, final long eventId, final int place, final TicketCategoryEnum ticketCategory) {
-        return ticketService.bookTicket(userId, eventId, place, ticketCategory).orElse(null);
+        Ticket ticket = new Ticket(userId, eventId, place, ticketCategory);
+        return ticketService.bookTicket(ticket);
     }
 
     @Override

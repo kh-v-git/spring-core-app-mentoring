@@ -4,16 +4,14 @@
  */
 package com.spring.taskone.demo.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.spring.taskone.demo.entities.User;
 
-public interface UserRepository {
-    Optional<User> findById(long id);
+public interface UserRepository extends StorageRepository<User, Long> {
 
-    Optional<User> save(User user);
+    Optional<User> getUserByEmail(String email);
 
-    void delete(long id);
-
-    boolean existsById(long id);
+    List<User> getUsersByName(String name, int pageSize, int pageNum);
 }
