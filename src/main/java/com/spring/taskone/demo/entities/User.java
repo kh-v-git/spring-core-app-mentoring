@@ -1,18 +1,12 @@
-/*
- * Canadian Tire Corporation, Ltd. Do not reproduce without permission in writing.
- * Copyright (c) 2022. Canadian Tire Corporation, Ltd. All rights reserved.
- */
 package com.spring.taskone.demo.entities;
 
 import java.util.Objects;
 
-public class User {
+public class User extends AbstractEntity {
     /**
      * User Id. UNIQUE.
      *
-     * @return User Id.
      */
-    private Long id;
     private String name;
     private String email;
 
@@ -29,14 +23,6 @@ public class User {
         this.id = id;
         this.name = name;
         this.email = email;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
     }
 
     public String getName() {

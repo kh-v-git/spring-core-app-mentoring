@@ -1,20 +1,13 @@
-/*
- * Canadian Tire Corporation, Ltd. Do not reproduce without permission in writing.
- * Copyright (c) 2022. Canadian Tire Corporation, Ltd. All rights reserved.
- */
 package com.spring.taskone.demo.entities;
 
 import java.util.Objects;
 
 import com.spring.taskone.demo.utils.TicketCategoryEnum;
 
-public class Ticket {
+public class Ticket extends AbstractEntity {
     /**
      * Ticket Id. UNIQUE.
-     *
-     * @return Ticket Id.
      */
-    private Long id;
     private long eventId;
     private long userId;
     private int placeNumber;
@@ -24,19 +17,19 @@ public class Ticket {
 
     }
 
-    public Ticket(final long eventId, final long userId, final int placeNumber, final TicketCategoryEnum ticketCategory) {
-        this.eventId = eventId;
+    public Ticket(final long userId, final long eventId, final int placeNumber, final TicketCategoryEnum ticketCategory) {
         this.userId = userId;
+        this.eventId = eventId;
         this.placeNumber = placeNumber;
         this.ticketCategory = ticketCategory;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
+    public Ticket(final long ticketId, final long userId, final long eventId, final int placeNumber, final TicketCategoryEnum ticketCategory) {
+        this.id = ticketId;
+        this.userId = userId;
+        this.eventId = eventId;
+        this.placeNumber = placeNumber;
+        this.ticketCategory = ticketCategory;
     }
 
     public long getEventId() {

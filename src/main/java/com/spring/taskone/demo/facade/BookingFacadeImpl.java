@@ -1,7 +1,3 @@
-/*
- * Canadian Tire Corporation, Ltd. Do not reproduce without permission in writing.
- * Copyright (c) 2022. Canadian Tire Corporation, Ltd. All rights reserved.
- */
 package com.spring.taskone.demo.facade;
 
 import java.time.LocalDate;
@@ -54,7 +50,7 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public Event updateEvent(final Event event) {
-        return eventService.updateEvent(event).orElse(null);
+        return eventService.updateEvent(event);
     }
 
     @Override
@@ -84,7 +80,7 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public User updateUser(final User user) {
-        return userService.updateUser(user).orElse(null);
+        return userService.updateUser(user);
     }
 
     @Override

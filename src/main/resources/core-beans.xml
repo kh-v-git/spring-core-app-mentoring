@@ -15,10 +15,12 @@
 
     <bean id="userService" class="com.spring.taskone.demo.service.user.UserServiceImpl"/>
 
-    <bean id="eventRepository" class="com.spring.taskone.demo.storage.EventInMemoryRepository"/>
+    <bean id="eventRepository" class="com.spring.taskone.demo.repository.impl.EventRepositoryImpl"/>
 
-    <bean id="userRepository" class="com.spring.taskone.demo.storage.UserInMemoryRepository"/>
+    <bean id="userRepository" class="com.spring.taskone.demo.repository.impl.UserRepositoryImpl"/>
 
-    <bean id="ticketRepository" class="com.spring.taskone.demo.storage.TicketInMemoryRepository"/>
+    <bean id="ticketRepository" class="com.spring.taskone.demo.repository.impl.TicketRepositoryImpl"/>
+
+    <bean id="inMemoryStorage" class="com.spring.taskone.demo.storage.InMemoryStorage"/>
 
 </beans>

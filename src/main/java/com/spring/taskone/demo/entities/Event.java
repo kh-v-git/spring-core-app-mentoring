@@ -1,19 +1,13 @@
-/*
- * Canadian Tire Corporation, Ltd. Do not reproduce without permission in writing.
- * Copyright (c) 2022. Canadian Tire Corporation, Ltd. All rights reserved.
- */
 package com.spring.taskone.demo.entities;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Event {
+public class Event extends AbstractEntity {
     /**
      * Event id. UNIQUE.
      *
-     * @return Event Id
      */
-    private Long id;
     private LocalDate date;
     private String title;
 
@@ -30,14 +24,6 @@ public class Event {
         this.id = id;
         this.date = date;
         this.title = title;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
     }
 
     public LocalDate getDate() {

@@ -15,7 +15,7 @@ public interface EventService {
 
     Event createEvent(Event event);
 
-    Optional<Event> updateEvent(Event event);
+    Event updateEvent(Event event);
 
     boolean deleteEvent(long eventId);
 }
