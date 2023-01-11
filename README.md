@@ -1,10 +1,12 @@
 ###
 Main task:
-    1. Configure entities:
+   
+
+     1. Configure entities
         User
         Ticket
         Event
-
+        
     2. Implement Services
 
     3. Implement Repository
